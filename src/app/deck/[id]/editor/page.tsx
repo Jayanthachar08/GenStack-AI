@@ -23,7 +23,7 @@ export default function EditorPage() {
 
   const deck = useQuery(api.decks.getById, id ? { id: id as any } : "skip");
   const slides = deck?.slides || [];
-  const currentSlide = slides[selectedSlide - 1] || slides[0];
+  const currentSlide = slides[selectedSlide - 1];
 
   useEffect(() => {
     if (currentSlide) {
